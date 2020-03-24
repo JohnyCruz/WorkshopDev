@@ -3,6 +3,15 @@ body {
     background: #e5e5e5;
     color: #25282B;
     margin: 0;
+     /* Adicionando a fonte montserrat do google na minha página */
+    font-family: 'Montserrat', sans-serif;
+}
+
+p,.description{
+    /* Aqui estou formatando as fontes do documento */
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
 }
 
 .hide{
@@ -44,6 +53,9 @@ a {
     justify-content: space-evenly;
 }
 
+#footer{
+    text-align: left;
+}
 #main{
     /* 
         aqui estamos agrupando a definição da margin
@@ -63,13 +75,19 @@ p{
 }
 button {
     border: none;
-    font-weight: bold;
     background: none;
     color: #ff5E84;
-   
+    
     cursor: pointer; /*mostra um ponteiro quando o usuário passar o mouse em cima de um selemento*/
-
+    
     outline: none; /*Remove a borda azulada que fica em volta do botão quando ele for clicado*/
+    
+    /* formatando a fonte dos meus botões */
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
 }
 button:hover{
     /* altera a propriedade hover de todos os botoes da página para mostrar um sublinhado*/
@@ -90,7 +108,47 @@ button.fat:hover{
 
     box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
 }
-#footer{
-    text-align: left;
+
+.idea {
+    display: flex;
+    
+    background-color: white;
+    border-radius: 32px;
+    border-radius: 0px 4px 16px -8px rgba(1,1,1,0.1);
+    
+    padding: 32px;
+    
+    margin-bottom: 32px;
 }
 
+.idea img{
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+}
+
+.idea h3{
+    margin: 0;
+}
+
+.idea p {
+    margin: 8px 0;
+    color:  #777;
+}
+
+.idea .description{
+    margin: 16px 0;
+}
+
+footer{
+        /* formatando a fonte do footer */
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: #777;
+}
+
+footer a {
+    opacity: 0.7;
+}
