@@ -3,6 +3,7 @@ body {
     background: #e5e5e5;
     color: #25282B;
     margin: 0;
+
      /* Adicionando a fonte montserrat do google na minha página */
     font-family: 'Montserrat', sans-serif;
 }
@@ -32,7 +33,7 @@ a {
 /*Estamos estilizando o conteúdo do nosso container*/
 #container{
     width: 90%; /* Colocando o width aqui e em porcentagem ele define que a largura do container será 90% da pagina*/
-    max-width: 980px; /*Aqui definimos que o tamanho máximo do nosso conteúdo será 980px*/
+    max-width: 1024px; /*Aqui definimos que o tamanho máximo do nosso conteúdo será 980px*/
 
     /*definindo margin-right e margin-left como automático estamos centralizando o conteúdo da nossa página*/
     margin: 40px auto;
@@ -151,4 +152,131 @@ footer{
 
 footer a {
     opacity: 0.7;
+}
+
+/* Modal */
+
+#modal{
+    background-color: #ff5E84;
+    
+    position: absolute;
+    top:0;
+
+    /* Aqui estou definindo que o modal irá ocupar 100% da área visível do meu dispositivo */
+    width: 100vw;
+    height: 100vw;
+
+    /* Posiciona os elementos no centro da tela */
+    display: flex;
+    justify-content: center;
+
+       
+    transition: 400ms;
+}
+
+/* Aqui estamos deixando claro que só vamos alterar a classe content dentro do modal, caso haja outra classe content ela nao será modificada */
+#modal .content{
+    margin-top: 128px;
+    color: white;
+}
+
+#modal .content h1{
+    text-align: center;
+    /* transformo todos os textos h1 em caixa alta */
+    text-transform: uppercase;
+}
+
+#modal form{
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* o que GAP faz? */
+    gap: 20px;
+}
+
+#modal .content form div:nth-child(3){
+    /* aqui estou pegando a terceira div e fazendo ela ocupar as duas colunas do grid */
+    grid-column: span 2;
+}
+#modal form input, form textarea{
+    width: 100%;
+
+    padding: 12px;
+    box-sizing: border-box;
+
+    border-radius: 6px;
+    border: 1px solid rgba(141,35,52,0.5);
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+#modal form label{
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.0.8px;
+}
+#modal form a {
+    background-color: #ffffff22;
+    color: white;
+
+    /* configuracão do display do "botão" */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+    /* configuracao do display do grid*/
+    align-self: end;
+
+    
+    transition: 400ms;
+
+}
+#modal form a:hover{
+    color: #ff5E84;
+    background: #fff;
+    
+    text-decoration: none;
+}
+#modal form button{
+    background: white;
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+    
+    /* Coloca o botao na segunda coluna */
+    grid-column: 2;
+    justify-self: end;
+
+    transition: 400ms;
+
+}
+
+
+#modal form button:hover{
+    background-color: #0984e3;
+    color:white;
+    text-decoration: none;
+
+}
+
+#modal.hide{
+    opacity: 0;
+    visibility: hidden;
+
 }
