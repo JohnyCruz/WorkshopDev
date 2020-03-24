@@ -1,6 +1,60 @@
+/*o site css tricks tem muito conteúdo de como fazer coisas no css*/
 body {
     background: #e5e5e5;
     color: #25282B;
+    margin: 0;
+}
+
+.hide{
+    display: none;
+}
+
+a:hover{
+    color: #ff5E84;
+    font-weight: bold;
+    text-decoration: none;
+}
+a {
+    color: #ff5E84;
+    text-decoration: none;
+}
+
+
+/*Estamos estilizando o conteúdo do nosso container*/
+#container{
+    width: 90%; /* Colocando o width aqui e em porcentagem ele define que a largura do container será 90% da pagina*/
+    max-width: 980px; /*Aqui definimos que o tamanho máximo do nosso conteúdo será 980px*/
+
+    /*definindo margin-right e margin-left como automático estamos centralizando o conteúdo da nossa página*/
+    margin: 40px auto;
+
+    /*Posiciona os elementos filhos do container lado a lado*/
+    display: flex;
+
+}
+
+#intro{
+    width: 300px;
+    margin-right: 20px;
+}
+
+#buttons {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#main{
+    /* 
+        aqui estamos agrupando a definição da margin
+        margin: top right bottom left margin: 10px 12px 10px 12px
+        margin: top-bottom right-left margin: 10px 0px
+
+    */
+    margin: 32px 0;
+}
+/* colocando uma virgula entre seletores css podemos aplicar estilos semelhates em vários seletores como em um grupo */
+footer {
     text-align: center;
 }
 
@@ -12,19 +66,31 @@ button {
     font-weight: bold;
     background: none;
     color: #ff5E84;
+   
+    cursor: pointer; /*mostra um ponteiro quando o usuário passar o mouse em cima de um selemento*/
+
+    outline: none; /*Remove a borda azulada que fica em volta do botão quando ele for clicado*/
+}
+button:hover{
+    /* altera a propriedade hover de todos os botoes da página para mostrar um sublinhado*/
+    text-decoration: underline;
+}
+button.fat:hover{
+    /*sobrescreve o hover que é aplicado a todos os botões para que no botão fat ele não sublinhe*/
+    text-decoration: none;
 }
 .fat {
     color: white;
     background: #ff5E84;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6%;
+
+    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
 }
 #footer{
     text-align: left;
 }
 
-#footer a {
-    color: #25282B;
-    text-decoration: none;
-}
-.hide{
-    display: none;
-}
